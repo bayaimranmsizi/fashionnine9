@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Nine-Nine</title>
+  <meta name="description" content="Get in touch with Nine-Nine Clothing. Contact us for collaborations, orders, or media inquiries.">
+  <meta name="keywords" content="Nine-Nine Clothing contact, fashion brand contact, streetwear South Africa, Nine-Nine customer service">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="css/contact_nine.css" rel="stylesheet" type="text/css">
+</head>
+	
+<body>
+<header class="navbar"><br>
+   <div class="logo"></div>
+	<a href="index.html" class="logo">
+  <img src="images/Asset 1.png" alt="Nine-Nine Logo">
+</a>
+  <nav>
+    <ul>
+      <li class="has-dropdown">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+          <div>
+            <h4>Highlights</h4>
+            <a href="#">Latest Drops</a>
+            <a href="#">Best Sellers</a>
+            <a href="#">Limited Edition</a>
+          </div>
+          <div>
+            <h4>Collections</h4>
+            <a href="#">Streetwear</a>
+            <a href="#">Formal</a>
+            <a href="#">Casual</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="store.html">Store</a></li>
+      <li><a href="partners.html">Partners</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="contact-hero reveal">
+    <h1>Get in Touch</h1>
+    <p>We’d love to hear from you. Drop us a message and let’s connect.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-container">
+    <!-- Contact Form -->
+    <div class="contact-form reveal">
+      <h2>Send us a Message</h2>
+      <form>
+        <div class="form-group">
+          <input type="text" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <input type="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+          <textarea placeholder="Your Message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn">Submit</button>
+      </form>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="contact-info reveal">
+      <h2>Contact Information</h2>
+      <p><strong>Email:</strong> info@ninenine.com</p>
+      <p><strong>Phone:</strong> +27 11 234 5678</p>
+      <p><strong>Address:</strong> Nine-Nine HQ, Johannesburg, South Africa</p>
+      <div class="socials">
+        <a href="#">Instagram</a>
+        <a href="#">Twitter</a>
+        <a href="#">TikTok</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="contact-cta reveal">
+    <h2>Let’s Build Something Great Together</h2>
+    <a href="partners.html" class="cta-btn">Partnerships</a>
+  </section>
+
+ <script>
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.2 });
+reveals.forEach(reveal => observer.observe(reveal));
+</script>
+
+	<footer>
+    <p>© 2025 Nine-Nine Clothing. All rights reserved.</p>
+  </footer>	
+
+</body>
+</html>

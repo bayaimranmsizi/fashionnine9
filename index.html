@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homepage | Nine-Nine Clothing</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Discover Nine-Nine — bold, unapologetic fashion that blends streetwear and culture. Shop our latest arrivals, collaborations, and timeless styles.">
+  <meta name="keywords" content="Nine-Nine, clothing, streetwear, fashion, South Africa, trendy outfits, urban wear, casual clothing, men fashion, women fashion">
+  <meta name="author" content="Nine-Nine Clothing">
+  <link rel="canonical" href="https://www.ninenine.com/homepage.html">
+	
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="css/homepage_nine.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<header class="navbar"><br>
+   <div class="logo"></div>
+	<a href="homepage.html" class="logo">
+  <img src="images/Asset 1.png" alt="Nine-Nine Logo">
+</a>
+  <nav>
+    <ul>
+      <li class="has-dropdown">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+          <div>
+            <h4>Highlights</h4>
+            <a href="#">Latest Drops</a>
+            <a href="#">Best Sellers</a>
+            <a href="#">Limited Edition</a>
+          </div>
+          <div>
+            <h4>Collections</h4>
+            <a href="#">Streetwear</a>
+            <a href="#">Formal</a>
+            <a href="#">Casual</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="store.html">Store</a></li>
+      <li><a href="partners.html">Partners</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero reveal">
+<video autoplay muted loop playsinline class="hero-video">
+    <source src="images/WIL Shirt0000.mp4" type="video/mp4">
+  </video>
+
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>Wear It. Own It.</h1>
+    <p>Unapologetically You. Nine-Nine Clothing is your next fashion move.</p>
+    <a href="#" class="btn">Shop Now</a>
+  </div>
+</section>
+
+ <section class="collection reveal">
+    <h2>New Arrivals</h2>
+    <div class="collection-grid">
+      <div class="item">
+        <img src="images/6123137095414433755.jpg" alt="Nine-Nine Graphic Tee">
+        <p>Graphic Tee</p>
+      </div>
+      <div class="item">
+        <img src="images/men 4.png" alt="Nine-Nine Urban Hoodie">
+        <p>Urban Hoodie</p>
+      </div>
+      <div class="item">
+        <img src="images/6125388895228117891.jpg" alt="Nine-Nine Streetwear Jacket">
+        <p>Streetwear Jacket</p>
+      </div>
+    </div>
+  </section>
+	
+ <section class="partners reveal">
+    <h2>Our Partners & Brands</h2>
+    <p class="subtitle">We’ve teamed up with some of the boldest names in fashion & lifestyle</p>
+    <div class="partner-grid">
+      <div class="partner-box">Trenthood</div>
+      <div class="partner-box">Zamani Design House</div>
+    </div>
+  </section>
+
+<!-- CALL TO ACTION -->
+ <section class="cta reveal">
+    <h2>Step Into the Nine-Nine Style</h2>
+    <p>Be unapologetically you. Fresh fits, bold looks, made for the culture.</p>
+    <a href="store.html" class="cta-btn">Explore Store</a>
+  </section>
+
+<footer>
+    <p>© 2025 Nine-Nine Clothing. All rights reserved.</p>
+  </footer>
+
+  <!-- SCROLL ANIMATION -->
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    reveals.forEach(r => observer.observe(r));
+  </script>
+	
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  reveals.forEach(r => observer.observe(r));
+</script>
+
+</body>
+</html>

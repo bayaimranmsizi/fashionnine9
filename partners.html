@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Partners | Nine-Nine</title>
+  <meta name="description" content="Discover Nine-Nine’s collaborations with top fashion and lifestyle brands. Bold partnerships that define urban culture.">
+  <meta name="keywords" content="Nine-Nine Clothing, fashion partners, Trenthood, Zamani Design House, streetwear collabs, Nine-Nine partnerships">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="css/partners_nine.css" rel="stylesheet" type="text/css">
+</head>
+	
+<body>
+<header class="navbar"><br>
+   <div class="logo"></div>
+	<a href="index.html" class="logo">
+  <img src="images/Asset 1.png" alt="Nine-Nine Logo">
+</a>
+  <nav>
+    <ul>
+      <li class="has-dropdown">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+          <div>
+            <h4>Highlights</h4>
+            <a href="#">Latest Drops</a>
+            <a href="#">Best Sellers</a>
+            <a href="#">Limited Edition</a>
+          </div>
+          <div>
+            <h4>Collections</h4>
+            <a href="#">Streetwear</a>
+            <a href="#">Formal</a>
+            <a href="#">Casual</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="store.html">Store</a></li>
+      <li><a href="partners.html">Partners</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="partners-hero reveal">
+    <h1>Our Partners</h1>
+    <p>Collaborating with brands that share our vision of bold style and authenticity.</p>
+  </section>
+
+  <!-- Partners Grid -->
+  <section class="partners-grid">
+    <div class="partner-card reveal">
+      <img src="images/ZDH LOGO.png" alt="ZDH">
+      <h3>Zamani Design House</h3>
+    </div>
+    <div class="partner-card reveal">
+      <img src="images/TH.png" alt="Trenthood">
+      <h3>Trenthood Agency</h3>
+    </div>
+  </section>
+
+  <!-- Highlight Section -->
+  <section class="partner-highlight reveal">
+    <div class="highlight-content">
+      <h2>Collab Spotlight</h2>
+      <p>Our latest partnership with more brands blends streetwear with performance. Together, we push boundaries in style and innovation.</p>
+      <a href="store.html" class="btn">Explore Collection</a>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="partners-cta reveal">
+    <h2>Want to Partner with Nine-Nine?</h2>
+    <a href="contact.html" class="cta-btn">Get in Touch</a>
+  </section>
+
+	<footer>
+    <p>© 2025 Nine-Nine Clothing. All rights reserved.</p>
+  </footer>	
+	
+<script>
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.2 });
+reveals.forEach(reveal => observer.observe(reveal));
+</script>
+	
+</body>
+</html>

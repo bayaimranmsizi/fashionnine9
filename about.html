@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Nine-Nine Clothing</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Learn more about Nine-Nine Clothing — a bold, street-smart brand redefining urban fashion with individuality, culture, and sustainability.">
+  <meta name="keywords" content="Nine-Nine Clothing, Streetwear, Fashion Brand, Sustainable Clothing, Urban Fashion, Street Culture, Bold Fashion, Trenthood">
+  <meta name="author" content="Nine-Nine Clothing">
+
+  <!-- Fonts & CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="css/about_nine.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<header class="navbar"><br>
+   <div class="logo"></div>
+	<a href="index.html" class="logo">
+  <img src="images/Asset 1.png" alt="Nine-Nine Logo">
+</a>
+  <nav>
+    <ul>
+        <li class="has-dropdown">
+          <a href="index.html">Home</a>
+          <div class="dropdown">
+            <div>
+              <h4>Highlights</h4>
+              <a href="#">Latest Drops</a>
+              <a href="#">Best Sellers</a>
+              <a href="#">Limited Edition</a>
+            </div>
+            <div>
+              <h4>Collections</h4>
+              <a href="#">Streetwear</a>
+              <a href="#">Formal</a>
+              <a href="#">Casual</a>
+            </div>
+          </div>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="store.html">Store</a></li>
+        <li><a href="partners.html">Partners</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="about-hero">
+    <div class="overlay"></div>
+    <div class="hero-text reveal">
+      <h1>We Are Nine-Nine</h1>
+      <p>Street-smart. Bold. Unapologetically you.</p>
+    </div>
+  </section>
+
+  <!-- ===== STORY ===== -->
+  <section class="our-story reveal">
+    <h2>Our Story</h2>
+    <p>Born from the streets, inspired by culture — Nine-Nine is more than just clothing. 
+      It’s an attitude. A statement. A community. We create bold and unapologetic fits 
+      designed to celebrate individuality and push boundaries.</p>
+  </section>
+
+  <!-- ===== MISSION ===== -->
+  <section class="our-mission reveal">
+    <h2>Our Mission</h2>
+    <p>To empower everyday rebels with fresh styles that stand out, without ever compromising comfort or confidence.</p>
+  </section>
+
+  <!-- ===== VALUES ===== -->
+  <section class="about-values reveal">
+    <h2>What We Stand For</h2>
+    <div class="values-grid">
+      <div class="value-box">
+        <h3>Style</h3>
+        <p>Every piece blends streetwear and high-fashion influences, keeping you ahead of the curve.</p>
+      </div>
+      <div class="value-box">
+        <h3>Culture</h3>
+        <p>Rooted in music, art, and youth energy — we’re about movement, not just clothing.</p>
+      </div>
+      <div class="value-box">
+        <h3>Sustainability</h3>
+        <p>Fashion with responsibility. Our commitment to mindful materials and ethical production never stops.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta reveal">
+    <h2>Join the Movement</h2>
+    <p>Be unapologetically you. Discover the Nine-Nine collection today.</p>
+    <a href="store.html" class="cta-btn">Explore Store</a>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>© 2025 Nine-Nine Clothing. All rights reserved.</p>
+  </footer>
+
+  <!-- ===== SCROLL ANIMATION SCRIPT ===== -->
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    reveals.forEach(reveal => observer.observe(reveal));
+  </script>
+</body>
+</html>

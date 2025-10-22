@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Store | Nine-Nine Clothing</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Shop Nine-Nine Clothing — bold streetwear and modern fits. Explore graphic tees, hoodies, and jackets inspired by street culture.">
+  <meta name="keywords" content="Nine-Nine Clothing, Streetwear, Hoodies, Jackets, T-shirts, Men's Fashion, Urban Clothing, South Africa Streetwear">
+  <meta name="author" content="Nine-Nine Clothing">
+
+  <!-- Fonts & Styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="css/store_nine.css" rel="stylesheet" type="text/css">
+</head>
+	
+<body>
+<header class="navbar"><br>
+   <div class="logo"></div>
+	<a href="index.html" class="logo">
+  <img src="images/Asset 1.png" alt="Nine-Nine Logo">
+</a>
+  <nav>
+    <ul>
+      <li class="has-dropdown">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+          <div>
+            <h4>Highlights</h4>
+            <a href="#">Latest Drops</a>
+            <a href="#">Best Sellers</a>
+            <a href="#">Limited Edition</a>
+          </div>
+          <div>
+            <h4>Collections</h4>
+            <a href="#">Streetwear</a>
+            <a href="#">Formal</a>
+            <a href="#">Casual</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="store.html">Store</a></li>
+      <li><a href="partners.html">Partners</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+	
+<section class="store-header">
+  <h1>New Arrivals</h1>
+  <div class="filters">
+    <select id="categoryFilter">
+      <option value="all">All Categories</option>
+      <option value="shirts">Shirts</option>
+      <option value="hoodies">Hoodies</option>
+      <option value="jackets">Jackets</option>
+    </select>
+    <select id="sortFilter">
+      <option value="latest">Sort by: Latest</option>
+      <option value="low-high">Price: Low to High</option>
+      <option value="high-low">Price: High to Low</option>
+    </select>
+  </div>
+</section>
+
+<section class="product-grid" id="productGrid">
+  <div class="product-card" data-category="shirts" data-price="350">
+    <img src="images/men 8.png" alt="Graphic Tee">
+    <h2>Graphic Tee</h2>
+    <p>R350</p>
+    <a href="#" class="btn">View</a>
+  </div>
+
+  <div class="product-card" data-category="hoodies" data-price="750">
+    <img src="images/man 3.png" alt="Urban Hoodie">
+    <h2>Beige Urban Shirt</h2>
+    <p>R350</p>
+    <a href="#" class="btn">View</a>
+  </div>
+
+  <div class="product-card" data-category="jackets" data-price="1200">
+    <img src="images/6123137095414433709.jpg" alt="Streetwear Jacket">
+    <h2>Streetwear Rib Tank</h2>
+    <p>R200</p>
+    <a href="#" class="btn">View</a>
+  </div>
+
+  <div class="product-card" data-category="shirts" data-price="350">
+    <img src="images/6123137095414433730.jpg" alt="Graphic Tee">
+    <h2>Tan Tee</h2>
+    <p>R350</p>
+    <a href="#" class="btn">View</a>
+  </div>
+
+  <div class="product-card" data-category="hoodies" data-price="750">
+    <img src="images/6123137095414433722.jpg" alt="Urban Hoodie">
+    <h2>Military Rib Tank</h2>
+    <p>R250</p>
+    <a href="#" class="btn">View</a>
+  </div>
+
+  <div class="product-card" data-category="jackets" data-price="1200">
+    <img src="images/6125388895228117927.jpg" alt="Streetwear Jacket">
+    <h2>Casual Black Tee</h2>
+    <p>R1200</p>
+    <a href="#" class="btn">View</a>
+  </div>
+
+  <div class="product-card" data-category="shirts" data-price="350">
+    <img src="images/6125388895228117897.jpg" alt="Graphic Tee">
+    <h2>Beige Vest Tee</h2>
+    <p>R350</p>
+    <a href="#" class="btn">View</a>
+  </div>
+
+  <div class="product-card" data-category="hoodies" data-price="750">
+    <img src="images/men 5.png" alt="Urban Hoodie">
+    <h2>Blue Gray Urban Tee </h2>
+    <p>R350</p>
+    <a href="#" class="btn">View</a>
+  </div>
+
+  <div class="product-card" data-category="jackets" data-price="1200">
+    <img src="images/men 9.png" alt="Streetwear Jacket">
+    <h2>Violet Green Shirt</h2>
+    <p>R350</p>
+    <a href="#" class="btn">View</a>
+  </div>
+	
+  <div class="product-card" data-category="jackets" data-price="1200">
+    <img src="images/6123137095414433765.jpg" alt="Streetwear Jacket">
+    <h2>Bright Red Tee</h2>
+    <p>R1200</p>
+    <a href="#" class="btn">View</a>
+  </div>
+	
+	
+  
+</section>
+	
+<footer>
+    <p>© 2025 Nine-Nine Clothing. All rights reserved.</p>
+  </footer>	
+	
+<script>
+  const categoryFilter = document.getElementById("categoryFilter");
+  const sortFilter = document.getElementById("sortFilter");
+  const productGrid = document.getElementById("productGrid");
+  let products = Array.from(productGrid.getElementsByClassName("product-card"));
+
+  function filterAndSort() {
+    let category = categoryFilter.value;
+    let sort = sortFilter.value;
+
+    // Filter
+    products.forEach(card => {
+      const match = category === "all" || card.dataset.category === category;
+      card.style.display = match ? "block" : "none";
+    });
+
+    // Sort
+    let visibleProducts = products.filter(card => card.style.display !== "none");
+    visibleProducts.sort((a, b) => {
+      let priceA = parseInt(a.dataset.price);
+      let priceB = parseInt(b.dataset.price);
+
+      if (sort === "low-high") return priceA - priceB;
+      if (sort === "high-low") return priceB - priceA;
+      return 0; // latest = default order
+    });
+
+    // Re-append sorted items
+    visibleProducts.forEach(card => productGrid.appendChild(card));
+  }
+
+  categoryFilter.addEventListener("change", filterAndSort);
+  sortFilter.addEventListener("change", filterAndSort);
+</script>
+	
+</body>
+</html>
