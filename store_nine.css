@@ -1,0 +1,231 @@
+@charset "utf-8";
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: #FEFEFF;
+  color: #111111;
+  line-height: 1.6;
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+  font-family: "Poppins", Arial, sans-serif;
+  font-weight: 700;
+  color: #00361D; /* Deep green tone for elegance */
+  letter-spacing: 0.6px;
+}
+
+/* Paragraphs & Text */
+p {
+  font-family: "Poppins", Arial, sans-serif;
+  font-weight: 400;
+  color: #FFFFFF; /* Darker gray-black for smoother readability */
+}
+
+
+/* ===== NAVBAR ===== */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 5%;
+  background-color: #004526; /* green */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover img {
+  transform: scale(1.05);
+}
+
+.navbar nav {
+  flex: 1;
+  display: flex;
+  justify-content: center; 
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar a {
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #FEFEFF;
+  position: relative;
+  padding: 6px 0;
+}
+
+/* underline on hover */
+.navbar a::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: -3px;
+  width: 0; height: 2px;
+  background-color: #7D9FCE;
+  transition: width 0.3s ease;
+}
+.navbar a:hover::after { width: 100%; }
+
+
+/* ===== DROPDOWN MENU ===== */
+.navbar li {
+  position: relative;
+}
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: flex;
+  gap: 3rem;
+  background: #FEFEFF;
+  color: #000;
+  padding: 2rem;
+  min-width: 450px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.35s ease;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.15);
+}
+.dropdown h4 {
+  font-size: 0.9rem;
+  margin-bottom: 0.6rem;
+  font-weight: 700;
+  color: #004526;
+}
+.dropdown a {
+  display: block;
+  font-size: 0.85rem;
+  color: #000;
+  margin-bottom: 0.4rem;
+}
+.dropdown a:hover { color: #7D9FCE; }
+.has-dropdown:hover .dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.store-header {
+  padding: 3rem 5%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.store-header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #004526;
+}
+.filters select {
+  padding: 8px 12px;
+  margin-left: 1rem;
+  border: 1px solid #828282;
+  border-radius: 4px;
+  background: white;
+  font-size: 0.9rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  padding: 0 5% 4rem;
+}
+
+.product-card {
+  background-color: #FEFEFF;
+  border: 1px solid #eaeaea;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.product-card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+.product-card h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #004526;
+  margin-bottom: 0.5rem;
+}
+.product-card p {
+  font-size: 1rem;
+  color: #828282;
+  margin-bottom: 1rem;
+}
+.product-card .btn {
+  background-color: #004526;
+  color: #FEFEFF;
+  padding: 10px 20px;
+  border: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+.product-card .btn:hover {
+  background-color: #7D9FCE;
+}
+
+footer {
+  background-color: #000;
+  color: #FEFEFF;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+/* ===== REVEAL ANIMATIONS ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .store-header { flex-direction: column; gap: 1.5rem; }
+  .filters select { margin: 0.5rem 0; width: 100%; }
+}
